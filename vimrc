@@ -4,7 +4,7 @@ autocmd BufWritePost vimrc source vimrc
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('$VIM/plugged')
+call plug#begin('~/.vim:/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
@@ -63,6 +63,7 @@ set showcmd         " 输入的命令显示出来，看的清楚些
 "set statusline=[%p%%]\ [POS=%l,%v]\ [TYPE=%Y]\ [FORMAT=%{&ff}]\ %F%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
 "set laststatus=2    " 启动显示状态行(1),总是显示状态行(2)  
 set ruler                   " 打开状态栏标尺
+set t_Co=256
 
 set history=1000 " 历史记录数
 
