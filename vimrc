@@ -54,7 +54,7 @@ set clipboard+=unnamed
 "显示
 set number 
 syntax on 
-"colorscheme onedark
+colorscheme onedark
 "colorscheme solarized
 "colorscheme molokai
 "colorscheme github
