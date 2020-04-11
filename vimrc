@@ -40,7 +40,6 @@ filetype indent on
 filetype plugin indent on    " required
 
 set nocompatible              " be iMproved, required
-
 "语言设置
 set langmenu=zh_CN.UTF-8
 set helplang=cn
@@ -64,6 +63,11 @@ set showcmd         " 输入的命令显示出来，看的清楚些
 "set laststatus=2    " 启动显示状态行(1),总是显示状态行(2)  
 set ruler                   " 打开状态栏标尺
 set t_Co=256
+
+"光标设置
+"高亮光标所在行和列
+set cursorline cursorcolumn
+"光标在不同模式下的状态
 
 set history=1000 " 历史记录数
 
@@ -112,6 +116,9 @@ set autoread
 
 "快捷键修改
 imap jj <Esc>
+"Ctrl+s默认为锁定屏幕，解锁屏幕为Ctrl+q
+"映射Ctrl+s为保存，但是并不生效
+"imap <C-s> :w<CR>
 
 "airline配置
 let g:airline#extensions#tabline#enabled = 1
