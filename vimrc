@@ -4,7 +4,7 @@ autocmd BufWritePost vimrc source vimrc
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim:/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
@@ -13,7 +13,7 @@ Plug 'luochen1990/rainbow'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'LucHermitte/lh-vim-lib'
+"Plug 'LucHermitte/lh-vim-lib'
 Plug 'LucHermitte/VimFold4C'
 
 "Plug 'inkarkat/vim-LogViewer' 
