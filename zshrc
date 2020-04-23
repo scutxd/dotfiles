@@ -97,3 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Change ls colours
+# microsoft下粗暴的把所有的权限都设置为的777,导致目录底色绿油油的一片，下面是权宜之计
+LS_COLORS="ow=01;36;40" && export LS_COLORS
