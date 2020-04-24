@@ -33,7 +33,7 @@
         "source": "Windows.Terminal.Wsl",
         "closeOnExit": true,
         "colorScheme": "OneHalfDark",
-        "startingDirectory": null,
+        "startingDirectory": "/mnt/d/TXD/Documents/GitHub",
         "fontFace": "Hack",
         "fontSize": 9
       },
