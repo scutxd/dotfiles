@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ryan/.oh-my-zsh"
 
@@ -99,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-Change ls colours
+#Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS
 
 # make cd use the ls colours
