@@ -139,3 +139,7 @@ let g:airline#extensions#tabline#fnamemod = ':p:~'
 "    let g:airline_section_c = airline#section#create(['%p'])
 "endfunction
 "autocmd VimEnter * call AirlineInit()
+"
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
