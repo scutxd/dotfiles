@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ryan/.oh-my-zsh"
 
@@ -68,7 +70,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,6 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Change ls colours
-# microsoft下粗暴的把所有的权限都设置为的777,导致目录底色绿油油的一片，下面是权宜之计
+
+#Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS
+
+# make cd use the ls colours
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+. /usr/share/autojump/autojump.sh

@@ -66,8 +66,19 @@ set t_Co=256
 
 "光标设置
 "高亮光标所在行和列
-set cursorline cursorcolumn
+set cursorline
 "光标在不同模式下的状态
+if &term == 'win32'
+        let &t_ti.=" \e[1 q"
+        let &t_SI.=" \e[5 q-- INSERT --"
+        let &t_EI.=" \e[1 q"
+        let &t_te.=" \e[0 q"
+else
+        let &t_ti.="\e[1 q"
+        let &t_SI.="\e[5 q"
+        let &t_EI.="\e[1 q"
+        let &t_te.="\e[0 q"
+endif
 
 set history=1000 " 历史记录数
 
@@ -128,3 +139,7 @@ let g:airline#extensions#tabline#fnamemod = ':p:~'
 "    let g:airline_section_c = airline#section#create(['%p'])
 "endfunction
 "autocmd VimEnter * call AirlineInit()
+"
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
