@@ -48,11 +48,7 @@ set termencoding=utf-8
 set encoding=utf-8
 
 "使用系统剪贴板
-<<<<<<< HEAD
-"set clipboard=unnamedplus
-=======
 set clipboard=unnamed
->>>>>>> 9dfec4213ba90da7e2b00053e1efa66db6d7b993
 
 "显示
 set number 
