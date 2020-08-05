@@ -101,6 +101,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cman='man -M /usr/share/man/zh_CN'
 
+# 设置setproxy和unsetproxy 可以快捷的开关
+# 需要时先输入命令 setproxy
+# 不需要时输入命令 unsetproxy
+alias setproxy="export HTTP_PROXY=socks5://10.0.0.1:51837; export HTTPS_PROXY=$http_proxy; echo 'HTTP Proxy on';"
+alias unsetproxy="unset HTTP_PROXY; unset HTTPS_PROXY; echo 'HTTP Proxy off';"
 
 #Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS
