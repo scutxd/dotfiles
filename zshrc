@@ -104,8 +104,20 @@ alias cman='man -M /usr/share/man/zh_CN'
 # 设置setproxy和unsetproxy 可以快捷的开关
 # 需要时先输入命令 setproxy
 # 不需要时输入命令 unsetproxy
-alias setproxy="export HTTP_PROXY=socks5://10.0.0.1:51837; export HTTPS_PROXY=$http_proxy; echo 'HTTP Proxy on';"
-alias unsetproxy="unset HTTP_PROXY; unset HTTPS_PROXY; echo 'HTTP Proxy off';"
+# 需要按照当前情况设置代理
+export socks5_proxy=127.0.0.1:51837
+alias setproxy="\
+    export HTTP_PROXY=$socks5_proxy;\
+    export HTTPS_PROXY=$socks5_proxy;\
+    git config --global http.proxy $socks5_proxy;
+    git config --global https.proxy $socks5_proxy;\
+    echo 'HTTP Proxy on'"
+alias unsetproxy="\
+    unset HTTP_PROXY;\
+    unset HTTPS_PROXY;\
+    git config --global --unset http.proxy;\
+    git config --global --unset https.proxy;\
+    echo 'HTTP Proxy off';"
 
 #Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS
