@@ -1,4 +1,5 @@
-.zshrc.swp
-vim/
+.swp
+vim/plugged
 tmux/
-*.log
+.log
+!/vim/autoload/plug.vim
