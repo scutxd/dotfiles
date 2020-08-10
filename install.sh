@@ -4,9 +4,12 @@
 DOTFILES=`pwd`
 
 # zsh
+rm ~/.zshrc
 ln -s $DOTFILES/zshrc ~/.zshrc
 
 # vim
+rm ~/.vimrc
+rm ~/.vim
 ln -s $DOTFILES/vimrc ~/.vimrc
 ln -s $DOTFILES/vim ~/.vim
 
@@ -15,6 +18,7 @@ ln -s $DOTFILES/vim ~/.vim
 #ln -s $DOTFILES/screenrc ~/.screenrc
 
 # tmux
+rm ~/.tmux.conf
 ln -s $DOTFILES/tmux.conf ~/.tmux.conf
 # ln -s $DOTFILES/tmux ~/.tmux
 
