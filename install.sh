@@ -16,7 +16,7 @@ ln -s $DOTFILES/vim ~/.vim
 
 # tmux
 ln -s $DOTFILES/tmux.conf ~/.tmux.conf
-ln -s $DOTFILES/tmux ~/.tmux
+# ln -s $DOTFILES/tmux ~/.tmux
 
 # dircolors
 #mv ~/.dir_colors ~/.dir_colors.old 2> /dev/null
