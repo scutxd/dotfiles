@@ -105,7 +105,9 @@ alias cman='man -M /usr/share/man/zh_CN'
 # 需要时先输入命令 setproxy
 # 不需要时输入命令 unsetproxy
 # 需要按照当前情况设置代理
-export socks5_proxy=127.0.0.1:51837
+# apt -o Acquire::http::proxy="socks5://10.0.0.1:1080/"
+# apt -o Acquire::http::proxy="http://10.0.0.1:1081/"
+export socks5_proxy=127.0.0.1:1080
 alias setproxy="\
     export HTTP_PROXY=$socks5_proxy;\
     export HTTPS_PROXY=$socks5_proxy;\
