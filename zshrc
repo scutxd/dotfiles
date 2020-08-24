@@ -70,7 +70,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages command-not-found)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages command-not-found vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -129,3 +129,8 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
 . /usr/share/autojump/autojump.sh
+
+##autosuggestion
+#bindkey '^f' vi-forward-word
+#bindkey '^e' vi-end-of-line
+bindkey '^e' forward-word
