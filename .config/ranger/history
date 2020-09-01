@@ -1,0 +1,13 @@
+open_with h
+draw_borders
+find dcs
+search dcs
+open_with 
+
+search dcs world
+search 
+find d
+find one
+set colorscheme snow
+set colorscheme defau;t
+set colorscheme default
