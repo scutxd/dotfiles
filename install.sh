@@ -7,6 +7,10 @@ DOTFILES=`pwd`
 rm ~/.zshrc
 ln -s $DOTFILES/zshrc ~/.zshrc
 
+# ranger
+rm -r ~/.config
+ln -s $DOTFILES/config ~/.config
+
 # vim
 rm ~/.vimrc
 rm ~/.vim
