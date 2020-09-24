@@ -3,10 +3,8 @@
 
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
-
   "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
   "copyOnSelect": true,
-
   "profiles": {
     "defaults": {
       // Put settings here that you want to apply to all profiles
@@ -33,9 +31,10 @@
         "source": "Windows.Terminal.Wsl",
         "closeOnExit": true,
         "colorScheme": "OneHalfDark",
-        "startingDirectory": "/mnt/d/TXD/Documents/GitHub",
         "fontFace": "Cascadia Mono",
-        "fontSize": 11
+        "fontSize": 10,
+        "backgroundImage": "D:/TXD/Documents/github/dotfiles/config/ranger/terminal.jpg",
+        "backgroundImageOpacity": 0.09
       },
       {
         "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",

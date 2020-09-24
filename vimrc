@@ -58,6 +58,11 @@ colorscheme onedark
 "colorscheme molokai
 "colorscheme github
 "set background=light
+
+"防止重载终端程序的背景,必须要放在有效的colorscheme后面
+highlight Normal ctermbg=none 
+highlight NonText ctermbg=none
+
 set showcmd         " 输入的命令显示出来，看的清楚些  
 "set statusline=[%p%%]\ [POS=%l,%v]\ [TYPE=%Y]\ [FORMAT=%{&ff}]\ %F%m%r%h%w\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
 "set laststatus=2    " 启动显示状态行(1),总是显示状态行(2)  
