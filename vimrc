@@ -1,6 +1,12 @@
 " 让配置变更立即生效
 autocmd BufWritePost vimrc source vimrc
 
+"our <leader> will be the space key
+let mapleader=' '
+
+" our <localleader> will be the '-' key
+let maplocalleader='-'
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -21,6 +27,9 @@ Plug 'LucHermitte/VimFold4C'
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Comment functions so powerful—no comment necessary.
+Plug 'preservim/nerdcommenter'
 
 "Plug 'prettier/vim-prettier', {
 "  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json',
