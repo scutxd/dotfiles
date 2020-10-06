@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cman='man -M /usr/share/man/zh_CN'
+alias ra='ranger'
 
 # 设置setproxy和unsetproxy 可以快捷的开关
 # 需要时先输入命令 setproxy
@@ -136,3 +137,5 @@ compinit
 #bindkey '^f' vi-forward-word
 #bindkey '^e' vi-end-of-line
 bindkey '^e' forward-word
+
+export DISPLAY=:0.0

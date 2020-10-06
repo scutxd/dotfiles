@@ -1,6 +1,9 @@
 " 让配置变更立即生效
 autocmd BufWritePost vimrc source vimrc
 
+" 重新打开回到上次所编辑文件的位置
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 "our <leader> will be the space key
 let mapleader=' '
 
@@ -25,11 +28,20 @@ Plug 'LucHermitte/VimFold4C'
 "Plug 'inkarkat/vim-LogViewer' 
 "Plug 'inkarkat/vim-ingo-library'
 Plug 'mtdl9/vim-log-highlighting'
+
+" File navigation
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Comment functions so powerful—no comment necessary.
-Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdcommenter', { 'on': 'NERDCommenterToggle' }
+
+" Taglist
+Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
+
+" Markdown
+" vim版本需要大于8.1或者使用neovim，先暂时留在这里
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync()}, 'for' :['markdown', 'vim-plug'] }
 
 "Plug 'prettier/vim-prettier', {
 "  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json',
@@ -67,6 +79,7 @@ colorscheme onedark
 "colorscheme molokai
 "colorscheme github
 "set background=light
+set scrolloff=5 
 
 "防止重载终端程序的背景,必须要放在有效的colorscheme后面
 highlight Normal ctermbg=none 
@@ -144,6 +157,26 @@ imap jj <Esc>
 "Ctrl+s默认为锁定屏幕，解锁屏幕为Ctrl+q
 "映射Ctrl+s为保存，但是并不生效
 "imap <C-s> :w<CR>
+"
+" ===
+" === NERDTree
+" ===
+map tt :NERDTreeToggle<CR>
+"let NERDTreeMapOpenExpl = ""
+"let NERDTreeMapUpdir = ""
+"let NERDTreeMapUpdirKeepOpen = "l"
+"let NERDTreeMapOpenSplit = ""
+"let NERDTreeOpenVSplit = ""
+"let NERDTreeMapActivateNode = "i"
+"let NERDTreeMapOpenInTab = "o"
+"let NERDTreeMapPreview = ""
+"let NERDTreeMapCloseDir = "n"
+"let NERDTreeMapChangeRoot = "y"
+
+" ===
+" === Taglist
+" ===
+map <silent> T :TagbarOpenAutoClose<CR>
 
 "airline配置
 let g:airline#extensions#tabline#enabled = 1
