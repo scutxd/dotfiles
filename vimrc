@@ -19,6 +19,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'endel/vim-github-colorscheme'
 Plug 'luochen1990/rainbow'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -32,6 +33,11 @@ Plug 'mtdl9/vim-log-highlighting'
 " File navigation
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ctrlpvim/ctrlp.vim'
+
+" A Vim plugin which shows a git diff in the sign column.
+Plug 'airblade/vim-gitgutter'
 
 " Comment functions so powerful—no comment necessary.
 Plug 'preservim/nerdcommenter', { 'on': 'NERDCommenterToggle' }
@@ -49,9 +55,15 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync()}, 'fo
 Plug 'prettier/vim-prettier'
 Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 
+"Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP,
+"unite, Denite, lightline, vim-startify and many more
+"Always load the vim-devicons as the very last one.
+Plug 'ryanoasis/vim-devicons'
+
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 let g:prettier#config#parser = 'babylon'
+
 call plug#end()
 
 "文件类型检测
@@ -80,6 +92,12 @@ colorscheme onedark
 "colorscheme github
 "set background=light
 set scrolloff=5 
+
+"When you make a change to a file tracked by git, the diff markers should
+"appear automatically. The delay is governed by vim's updatetime option; the
+"default value is 4000, i.e. 4 seconds, but I suggest reducing it to around
+"100ms (add set updatetime=100 to your vimrc).
+set updatetime=200 " 默认值为4000ms，
 
 "防止重载终端程序的背景,必须要放在有效的colorscheme后面
 highlight Normal ctermbg=none 
@@ -186,7 +204,7 @@ let g:airline#extensions#tabline#fnamemod = ':p:~'
 "    let g:airline_section_c = airline#section#create(['%p'])
 "endfunction
 "autocmd VimEnter * call AirlineInit()
-"
+let g:airline_powerline_fonts = 1
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
