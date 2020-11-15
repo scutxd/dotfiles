@@ -172,6 +172,7 @@ set autoread
 
 "快捷键修改
 imap jj <Esc>
+nnoremap zz :q<CR>
 "Ctrl+s默认为锁定屏幕，解锁屏幕为Ctrl+q
 "映射Ctrl+s为保存，但是并不生效
 "imap <C-s> :w<CR>
