@@ -17,6 +17,11 @@ rm ~/.vim
 ln -s $DOTFILES/vimrc ~/.vimrc
 ln -s $DOTFILES/vim ~/.vim
 
+# neovim
+mkdir -p ~/.config/nvim
+rm ~/.config/nvim/init.vim
+ln -s $DOTFILES/vimrc ~/.config/nvim/init.vim
+
 # screen
 #mv ~/.screenrc ~/.screenrc.old 2> /dev/null
 #ln -s $DOTFILES/screenrc ~/.screenrc
