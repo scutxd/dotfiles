@@ -3,6 +3,4 @@ vim/plugged
 !/vim/autoload/plug.vim
 tmux/
 .log
-!/config/ranger/
-
-config/configstore/cos-nodejs-sdk-v5-storage.json
+/config
