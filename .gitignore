@@ -1,6 +1,8 @@
 .swp
 vim/plugged
+!/vim/autoload/plug.vim
 tmux/
 .log
-!/vim/autoload/plug.vim
-config/
+!/config/ranger/
+
+config/configstore/cos-nodejs-sdk-v5-storage.json

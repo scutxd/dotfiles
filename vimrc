@@ -4,11 +4,12 @@ autocmd BufWritePost vimrc source vimrc
 " 重新打开回到上次所编辑文件的位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-"our <leader> will be the space key
+"our <leader> will be the space key 空格键
 let mapleader=' '
 
+" 暂时不需要localleader
 " our <localleader> will be the '-' key
-let maplocalleader='-'
+" let maplocalleader='-'
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -24,7 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "Plug 'LucHermitte/lh-vim-lib'
-Plug 'LucHermitte/VimFold4C'
+"Plug 'LucHermitte/VimFold4C'
 
 "Plug 'inkarkat/vim-LogViewer' 
 "Plug 'inkarkat/vim-ingo-library'
@@ -158,9 +159,9 @@ set expandtab
 "设定自动缩进为4个字符
 set shiftwidth=4
 
-"设定 list模式，即显示空格和TAB等
-"set list
-"set listchars=space:.
+"设定list模式，即显示空格,TAB,行尾等特殊字符
+set list
+set listchars=space:_
 
 "折叠方法syntax
 set foldmethod=syntax
