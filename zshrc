@@ -104,7 +104,12 @@ alias vi='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cman='man -M /usr/share/man/zh_CN'
-alias ra='ranger'
+
+# When quitting, it automatically switches to the new directory, and only requires running exit one time to close the window
+# So do not use shift+s to run command( it will causes lots of nested shells), just quit
+alias ra='. ranger'
+
+alias lg='lazygit'
 
 # 设置setproxy和unsetproxy 可以快捷的开关
 # 需要时先输入命令 setproxy
