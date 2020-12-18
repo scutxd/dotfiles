@@ -21,6 +21,9 @@ Plug 'tomasr/molokai'
 Plug 'endel/vim-github-colorscheme'
 Plug 'luochen1990/rainbow'
 
+"按照缩进显示竖线，但是在终端中显示的效果并不太好，只能做到相邻的竖线采用不同颜色，但是看起来也很费力
+"Plug 'nathanaelkane/vim-indent-guides'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -161,7 +164,7 @@ set shiftwidth=4
 
 "设定list模式，即显示空格,TAB,行尾等特殊字符
 set list
-set listchars=space:_
+set listchars=space:·
 
 "折叠方法syntax
 set foldmethod=syntax
@@ -197,6 +200,11 @@ map tt :NERDTreeToggle<CR>
 " === Taglist
 " ===
 map <silent> T :TagbarOpenAutoClose<CR>
+
+" ===
+" === NerdCommenter,Toggle是最常用的功能了，因此使用<leader>cc最快速
+" ===
+map <leader>cc <plug>NERDCommenterToggle
 
 "airline配置
 let g:airline#extensions#tabline#enabled = 1
