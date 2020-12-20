@@ -21,6 +21,8 @@ ln -s $DOTFILES/vim ~/.vim
 mkdir -p ~/.config/nvim
 rm ~/.config/nvim/init.vim
 ln -s $DOTFILES/vimrc ~/.config/nvim/init.vim
+mkdir "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/ -p
+ln -s $DOTFILES/vim/autoload/plug.vim "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
 
 # screen
 #mv ~/.screenrc ~/.screenrc.old 2> /dev/null
