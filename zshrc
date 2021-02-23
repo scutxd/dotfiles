@@ -109,6 +109,19 @@ alias cman='man -M /usr/share/man/zh_CN'
 # So do not use shift+s to run command( it will causes lots of nested shells), just quit
 alias ra='. ranger'
 
+#https://wiki.archlinux.org/index.php/Ranger#Preventing_nested_ranger_instances
+#Preventing nested ranger instances
+#You can start a shell in the current directory with S, when you exit the shell you get back to your ranger instance.
+#When you however forget that you already are in a ranger shell and start ranger again you end up with ranger running a shell running ranger.
+#To prevent this you can create the following function in your shell's startup file:
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/local/bin/ranger "$@"
+    else
+        exit
+    fi
+}
+
 alias lg='lazygit'
 
 # 设置setproxy和unsetproxy 可以快捷的开关
