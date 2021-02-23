@@ -159,3 +159,5 @@ compinit
 bindkey '^e' forward-word
 
 export DISPLAY=:0.0
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
